@@ -249,12 +249,12 @@ Type is decided at runtime.
 
 It automatically converts types.
 
-Example:
-
+#### Example:
+```js
 console.log("5" + 2);  // "52"
 console.log("5" - 2);  // 3
 console.log(true + 1); // 2
-
+```
 
 This is called:
 
