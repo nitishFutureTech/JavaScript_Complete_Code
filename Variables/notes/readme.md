@@ -100,3 +100,92 @@ const pi = 3.14;
 pi = 3.15;   // ❌ Error
 ```
 
+## 3️⃣ Scope of Variables
+### 🔹 Global Scope
+
+```JS
+let a = 10;
+
+function test() {
+   console.log(a);  // accessible
+}
+```
+--------------------------------------------------------------------------
+### 🔹 Function Scope (var)
+
+```JS
+function demo() {
+   var x = 5;
+}
+
+console.log(x);  // ❌ Error
+```
+--------------------------------------------------------------------------
+
+### 🔹 Block Scope (let & const)
+
+```JS
+{
+   let y = 20;
+}
+
+console.log(y);  // ❌ Error
+```
+--------------------------------------------------------------------------
+
+## 4️⃣ Hoisting
+JavaScript moves variable declarations to the top of their scope.
+
+### 🔹 var Hoisting
+```JS
+console.log(a);
+var a = 10;
+```
+Output:
+```JS
+undefined
+```
+
+Behind the scenes:
+```JS
+var a;
+console.log(a);
+a = 10;
+```
+--------------------------------------------------------------------------
+
+### 🔹 let & const Hoisting (Temporal Dead Zone)
+
+```JS
+console.log(b);
+let b = 20;
+```
+
+❌ ReferenceError
+
+This happens because of the Temporal Dead Zone (TDZ).
+
+--------------------------------------------------------------------------
+
+## 5️⃣ Difference Between var, let, and const
+
+| Feature   | var | let   |  const  |
+|-----------|-----|-------|----------|
+| Scope | Function  | Block  |  Block |
+| Re-declare  | Yes  | No |  No  |
+| Re-assign  | Yes | Yes  |  No  |
+| Hoisting | Yes | Yes (TDZ) | Yes (TDZ)
+--------------------------------------------------------------------------
+
+# 💠 Practics Questions
+```JS
+1 - Declare a variable name using let and assign your name to it. Print it in console.
+
+2 - Declare a variable age using var and assign your age. Then change its value.
+
+3 - Create a constant variable pi and assign value 3.14. Try changing it. What happens?
+
+4 - Declare three variables in one line: a, b, c with values 10, 20, 30.
+
+5 - Create a variable without assigning a value. Print it. What is the output?
+```
