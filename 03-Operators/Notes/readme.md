@@ -69,3 +69,98 @@ console.log(a <= 4);   // false
 - `==` → compares only value
 
 - `===` → compares value + type (recommended)
+----------------------------------------
+# 4️⃣ Logical Operators
+Used to combine multiple conditions.
+```JS
+let age = 20;
+let hasID = true;
+
+console.log(age > 18 && hasID);  // true (AND)
+console.log(age > 25 || hasID);  // true (OR)
+console.log(!hasID);             // false (NOT)
+```
+- `&&` → AND (both must be true)
+
+- `||` → OR (at least one true)
+
+- `!` → NOT (reverse result)
+----------------------------------------
+# 5️⃣ Increment & Decrement
+```JS
+let x = 5;
+
+x++;  // Increment → 6
+x--;  // Decrement → 5
+```
+#### Pre vs Post
+```JS
+let a = 5;
+console.log(++a); // 6 (Pre-increment)
+
+let b = 5;
+console.log(b++); // 5 (Post-increment)
+```
+----------------------------------------
+# 6️⃣ Ternary Operator (Shortcut of if-else)
+```JS
+let age = 18;
+
+let result = (age >= 18) ? "Adult" : "Minor";
+console.log(result);
+```
+#### Syntax:
+```JS
+condition ? value_if_true : value_if_false
+```
+----------------------------------------
+# 7️⃣ Type Operator
+```JS
+let name = "Nitish";
+
+console.log(typeof name);  // string
+```
+----------------------------------------
+# 8️⃣ String Operator
+```JS
+let first = "Nitish";
+let last = "Kushwaha";
+
+console.log(first + " " + last);
+```
+----------------------------------------
+# 9️⃣ Nullish & Optional Operators (Modern JS)
+### Nullish Coalescing (??)
+
+Returns right value if left is `null` or `undefined`.
+```JS
+let user = null;
+console.log(user ?? "Guest");  // Guest
+```
+### Optional Chaining (?.)
+
+Prevents errors if property does not exist.
+```JS
+let person = {};
+console.log(person.address?.city);  // undefined (no error)
+```
+----------------------------------------
+# 🔟 Bitwise Operators (Advanced)
+```JS
+console.log(5 & 1);  // AND
+console.log(5 | 1);  // OR
+console.log(5 ^ 1);  // XOR
+```
+Used in low-level programming and advanced logic.
+
+----------------------------------------
+# 📌 Summary Table
+| Type | Operators |
+|-------|-----------|
+| Arithmetic |	+ - * / % ** |
+| Assignment |	= += -= *= /= |
+| Comparison |	== === != !== > < |
+| Logical |	&& | 
+| Ternary |	? : |
+| Type |	typeof |
+| Modern |	?? ?. |
