@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .green {
+            background-color: green;
+        } 
+        .blue {
+            background-color: blue;
+        }
+        .red {
+            background-color: red;
+        }
+        .pink {
+            background-color: pink;
+        }
+        button {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background-color: rgb(68, 119, 187);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="red" id="heading">Document Object Model</h1>
+    <button onclick="green()">Green</button>
+    <button onclick="blue()">Blue</button>
+    <button onclick="red()">Red</button>
+    <button onclick="pink()">Pink</button>
+
+
+    <script>
+        let ele = document.querySelector("#heading");
+         function green(){
+            ele.classList.remove("red");
+            ele.classList.add("green");
+            console.log(ele.classList);
+        }
+        // function blue(){
+        //     ele.classList.add("blue");
+        // }
+        // function red(){
+        //     ele.classList.add("red");
+        // }
+        // function pink(){
+        //     ele.classList.add("pink");
+        // }
+        function green() {
+            ele.className = "green";
+        }
+        function blue() {
+            ele.className = "blue";
+        }
+        function red() {
+            ele.className = "red";
+        }
+        function pink() {
+            ele.className = "pink";
+        }
+        document.querySelectorAll("button").forEach(btn => {
+            btn.style.backgroundColor = btn.innerText.toLowerCase();
+        });
+
+
+
+    </script>
+</body>
+</html>
